@@ -1,6 +1,6 @@
 # FIAP-3SIR
 
-# Repositório de arquivos referentes as disciplinas do curso de Sistema de Informação da turma 3R em 2023
+# Repositório de arquivos referentes as disciplinas do curso de Sistema de Informação da turma 3SIR em 2023
 
 ## Disciplinas
 
