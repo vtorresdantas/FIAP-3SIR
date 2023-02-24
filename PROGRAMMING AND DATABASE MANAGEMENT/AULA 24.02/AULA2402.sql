@@ -73,9 +73,15 @@ select employee_id, last_name, salary
 from employees
 where salary > 
                 (select avg(salary)
+                from employees) 
+and department_id IN 
+                (select department_id
                 from employees
-                where lower(last_name) like '%u%')
-                order by salary asc;
+                where lower(last_name) like '%u%');
+                
+             
+                
+            
           
 
 
