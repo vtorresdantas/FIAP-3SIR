@@ -5,3 +5,5 @@ nome, endereço e telefone.
 - Consumir este endpoint via javascript; 
 - Mostrar os clientes em uma tabela html. 
 
+API: https://demo9186860.mockable.io/exercicio2
+
