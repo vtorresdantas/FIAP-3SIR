@@ -8,15 +8,12 @@
 </head>
 <body>
 
-    <input type="button" value="Buscar departamento" onclick="buscarDepartamento()"/>
-
-    <ul id="departamento"></ul>
-
     <h3> Endereço </h3>
     CEP: <input type="text" id="cep" onblur="buscarCep(this.value)"/>
     
     Rua: <input type="text" id="rua" />
     Bairro: <input type="text" id="bairro" />
+    Cidade: <input type="text" id="cidade" />
 
 
 
@@ -25,23 +22,6 @@
 
 <script>
 
-function buscarDepartamento(){
-    fetch("https://demo1127350.mockable.io/tipo-dados")
-    .then(response => response.json())
-    .then(data => criarListaDepartamento(data))
-    .catch(error => alert(error))
-}
-
-function criarListaDepartamento(data){
-
-    for(let i = 0; i < data.length; i++)
-    {
-        let item = `<li>${data[i]}</li>`;
-        document.getElementById("departamento").innerHTML += item;
-
-
-    }
-}
 
 function buscarCep(cep){
 debugger;
@@ -56,6 +36,7 @@ function preencherCep(data){
 
 document.getElementById("rua").value = data.logradouro;
 document.getElementById("bairro").value = data.bairro;
+document.getElementById("cidade").value = data.cidade;
 
 }
 
