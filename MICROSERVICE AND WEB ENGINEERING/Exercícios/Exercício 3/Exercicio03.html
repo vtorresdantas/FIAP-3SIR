@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function listarCarros() {
+        fetch("https://demo9186860.mockable.io/exercicio3")
+        .then(response => response.json())
+        .then(data => criarListaCarros(data))
+        .catch(error => alert(error)) 
+    }
+
+    function criarListaCarros(data) {
+        
+        for(let i = 0; i <data.length; i++)
+        {
+            let item = `<option>${data[i].modelo}</option>`;
+            document.getElementById("cars").innerHTML += item;
+        }
+
+    }
+
+</script>
+
+<body onload="listarCarros()">
+    <div>
+        <h3>Selecione um carro</h3>
+        <select name="cars" id="cars">
+        
+        </select>   
+  </div>
+</body>
+
+
+
+</html>
