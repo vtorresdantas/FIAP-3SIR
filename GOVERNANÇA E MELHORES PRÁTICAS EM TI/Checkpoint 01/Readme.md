@@ -19,6 +19,47 @@ OBS: Não altere a Classe de Objetos que foi fornecida (a ser testada). Seu foco
 os testes e observar se a Classe fornecida funciona ou não. Como o programa fonte não tem
 main(), não tente rodar a Classe fornecida diretamente – rode as JUNITs! 
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+class CodigoPessoaFisicaTest {
+
+	@Test
+	public void testeValidaCPFInvalido() {
+		String valorCpf = "11144477705";
+		Boolean digitoReal = null;
+
+		CodigoPessoaFisica cdg = new CodigoPessoaFisica();
+		Boolean digitoEsperado = false;
+		digitoReal = cdg.validaCPF(valorCpf);
+		assertEquals(digitoEsperado, digitoReal);
+	}
+
+	@Test
+	public void testeValidaCPFValido() {
+		String valorCpf = "37064170817";
+		Boolean digitoReal = null;
+
+		CodigoPessoaFisica cdg = new CodigoPessoaFisica();
+		Boolean digitoEsperado = true;
+		digitoReal = cdg.validaCPF(valorCpf);
+		assertEquals(digitoEsperado, digitoReal);
+	}
+
+	@Test
+	public void formataCPF() {
+		String valorCpf = "362.598.688-47";
+		String cpfEsperado = "36259868847";
+
+		CodigoPessoaFisica cdg = new CodigoPessoaFisica();
+		String cpfReal = cdg.removeCaracteresEspeciais(valorCpf);
+		assertEquals(cpfReal, cpfEsperado);
+	}
+
+}
+
+
 ## 2° Desafio
 
 Crie uma Classe ValidadoraAcesso com um método que contenha uma lista (array) de CPFs
