@@ -19,6 +19,9 @@ OBS: Não altere a Classe de Objetos que foi fornecida (a ser testada). Seu foco
 os testes e observar se a Classe fornecida funciona ou não. Como o programa fonte não tem
 main(), não tente rodar a Classe fornecida diretamente – rode as JUNITs! 
 
+![image](https://user-images.githubusercontent.com/82169520/223282888-1e24f35b-ab14-4c92-a535-1ca678363cd7.png)
+
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
