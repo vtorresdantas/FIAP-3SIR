@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 4, 197, 245),
+      body: SafeArea(
+        child: Column(
+          children: [
+            CircleAvatar(
+              backgroundImage: AssetImage('images/62342894.png'),
+              radius: 50,
+            ),
+            Text(
+              'Vitor Torres', 
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 40,
+                fontFamily: 'Pacifico',
+              ),
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Row(
+                  children: [
+                    Icon(Icons.phone, color: Colors.teal,),
+                    Text(
+                      "+55 11 995398379",
+                    style: TextStyle(
+                      color: Colors.teal,
+                    )),
+                  ],
+
+                ),
+              ),
+
+            ),
+          ]
+        ),
+      )
+    );
+  }
+}
