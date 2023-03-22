@@ -1,0 +1,113 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Checkpoint'),
+        ),
+        body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Seu Nome"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.facebook),
+                Icon(Icons.email),
+                Icon(Icons.phone),
+              ],
+            ),
+          ],
+        ),
+        drawer: Drawer(
+          child: Column(
+            children: [
+              UserAccountsDrawerHeader(
+                accountName: Text('Diego'),
+                accountEmail: Text("email@email.com"),
+                currentAccountPicture: CircleAvatar(),
+              ),
+              Expanded(
+                child: ListView(
+                  children: [
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.graphic_eq),
+                      title: Text('Gráficos'),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: null,
+          backgroundColor: Colors.green,
+          child: Icon(Icons.whatsapp),
+        ),
+      ),
+    ),
+  );
+}
