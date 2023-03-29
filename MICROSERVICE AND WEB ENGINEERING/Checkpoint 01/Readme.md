@@ -40,6 +40,22 @@ Conexão com o MySQL
 #### Thymeleaf 
 	
 	O Thymeleaf é uma template engine para projetos Java que facilita a criação de páginas HTML. Sendo assim, ele serve para gerar páginas HTML no lado servidor de forma dinâmica, permitindo a troca de informações entre o código Java e as página HTML, de tal maneira ele garante que o desenvolvedor consiga criar templates de forma mais fácil para suas aplicações.
+	
+	@GetMapping atende a uma requisição http
+	Exemplos:
+	
+	@GetMapping("/hello")
+	public String hello(HttpServletRequest request) {
+		request.setAttribute("nome", "mundo");
+		return "hello";
+	}
+	
+	@GetMapping("/edit/{idade}")
+	public String getById(Model model, @PathVariable("idade") Integer idIdade) {
+		// model.addAttribute("")
+		return "cliente/edit";
+
+	}
 
 Exemplo do index arquivo prof.
 
