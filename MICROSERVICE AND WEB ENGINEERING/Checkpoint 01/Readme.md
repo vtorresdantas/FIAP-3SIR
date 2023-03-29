@@ -37,6 +37,31 @@ Controller - Direcionamento do usuário pelas páginas, listagens.
 Conexão com o MySQL
 ![image](https://user-images.githubusercontent.com/82169520/227973942-e6aa8366-2ea8-4b00-b1aa-b87db2d1cd43.png)
 
+#### Thymeleaf 
+	
+	O Thymeleaf é uma template engine para projetos Java que facilita a criação de páginas HTML. Sendo assim, ele serve para gerar páginas HTML no lado servidor de forma dinâmica, permitindo a troca de informações entre o código Java e as página HTML, de tal maneira ele garante que o desenvolvedor consiga criar templates de forma mais fácil para suas aplicações.
+
+Exemplo do index arquivo prof.
+
+<p>
+		Identificador para edição: <span th:text="${idade}"></span>.
+	</p>
+	
+	th:text="${idade}" - Serve para passarmos uma variável para o html da página.
+	
+Código da controller para a váriavel idade utilizada acima
+
+	@GetMapping("/edit/{idade}")
+	public String getById(Model model, @PathVariable("idade") Integer idIdade) {
+		// model.addAttribute("")
+		return "cliente/edit";
+
+	}
+	
+Exemplo site - https://www.treinaweb.com.br/blog/o-que-e-o-thymeleaf
+![image](https://user-images.githubusercontent.com/82169520/228570304-b447a3f5-abf6-4589-a938-ab87c0e0d4d6.png)
+
+
 #### Controller
 
 Ex Produto
