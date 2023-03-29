@@ -169,6 +169,14 @@ public class ProdutoController {
 }
 
 #### Model
+Responspavel dentro do Controller de mandar informações para a view
+
+public String home(Model model)
+List<Pedido> pedidos = Arrays.asList(pedido);
+		model.addAttribute("pedidos", pedido);
+
+
+
 Exemplo produto model
 
 package br.com.fiap.exemplo.exemplo.models;
