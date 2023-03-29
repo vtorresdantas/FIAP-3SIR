@@ -16,6 +16,7 @@ Spring Web
 DevTools
 Thymeleaf
 Data JPA
+MySQL Driver
 ![image](https://user-images.githubusercontent.com/82169520/227974236-0a5a506f-9626-4fa4-b9f4-df7b4ce7ea0f.png)
 
 
