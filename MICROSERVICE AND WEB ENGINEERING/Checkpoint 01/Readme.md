@@ -15,7 +15,7 @@ Dependências usadas:
 - Spring Web
 - DevTools
 - Thymeleaf
-- Data JPA (Facilita comunicação com o banco de dados. Toda a classe que vai usar Data JPA é interface)
+- Data JPA (Facilita comunicação com o banco de dados. Toda a classe que vai usar Data JPA é interface. Reduz a necessidade do EntityManager por ja ser existente.)
 - MySQL Driver (Conexão com o banco de dados)
 
 ![image](https://user-images.githubusercontent.com/82169520/227974236-0a5a506f-9626-4fa4-b9f4-df7b4ce7ea0f.png)
