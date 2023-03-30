@@ -1,5 +1,11 @@
 # Checkpoint 01
 
+ - Acesso ao projeto: localhost:8080
+ 
+ - Importar projeto no eclipse ide
+ 
+ - Debug as application server
+
 ## Feito por 
 
 - Vitor Torres RM: 88415
