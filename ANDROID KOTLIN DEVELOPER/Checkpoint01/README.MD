@@ -21,15 +21,19 @@ Função criada para a realização das operações matemáticas. Criada a vari�
 ![image](https://user-images.githubusercontent.com/82169520/229133723-14cf789b-0044-4cb4-8da1-b34b62b407fa.png)
 
 - Dividir
+        
 ![image](https://user-images.githubusercontent.com/82169520/229134620-97570e57-bee3-4784-b1d7-535f7b33a53c.png)
 
 - Somar
+        
 ![image](https://user-images.githubusercontent.com/82169520/229134925-f0eacef2-e99f-4e83-a2b6-14e178a1216b.png)
 
 - subtrair
+        
 ![image](https://user-images.githubusercontent.com/82169520/229134995-81f113f0-9980-43f1-bf41-81b536cc783b.png)
 
 - Multiplicar
+        
 ![image](https://user-images.githubusercontent.com/82169520/229135039-f985991c-1467-496d-9aa3-ea79894a180b.png)
 
 
