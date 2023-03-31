@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/82169520/228997546-5a1b6d43-454d-49ac-92a1-47f376745548.png)
 
-https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout 
+- https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout 
 
 val button = findViewById<Button>(R.id.button)
         val textView = findViewById<TextView>(R.id.textView)
@@ -20,16 +20,16 @@ setOnClickListener serve para reconhecer o click no botão. No exemplo abaixo, a
 Função criada para a realização das operações matemáticas. Criada a variável panelValue para passar o valor ao painel dps da realização. Criado as funções subtrair, dividir, multiplicar e somar, foram atribuidas a um "mini loop" com a utilização do when. Segundo o Chat GPT, "A função when em Kotlin é uma expressão condicional que pode ser usada como uma alternativa mais concisa e legível ao switch em Java. Ela permite que você compare um valor com vários casos possíveis e execute um bloco de código correspondente ao primeiro caso que corresponde ao valor."
 ![image](https://user-images.githubusercontent.com/82169520/229133723-14cf789b-0044-4cb4-8da1-b34b62b407fa.png)
 
-Dividir
+- Dividir
 ![image](https://user-images.githubusercontent.com/82169520/229134620-97570e57-bee3-4784-b1d7-535f7b33a53c.png)
 
-Somar
+- Somar
 ![image](https://user-images.githubusercontent.com/82169520/229134925-f0eacef2-e99f-4e83-a2b6-14e178a1216b.png)
 
-subtrair
+- subtrair
 ![image](https://user-images.githubusercontent.com/82169520/229134995-81f113f0-9980-43f1-bf41-81b536cc783b.png)
 
-Multiplicar
+- Multiplicar
 ![image](https://user-images.githubusercontent.com/82169520/229135039-f985991c-1467-496d-9aa3-ea79894a180b.png)
 
 
