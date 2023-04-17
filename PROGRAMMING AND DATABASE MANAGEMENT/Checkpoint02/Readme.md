@@ -93,6 +93,16 @@ no manual Oracle SQL Reference.
 
 ![image](https://user-images.githubusercontent.com/82169520/232565911-5e19e326-8979-4c9c-860f-13233e40ea94.png)
 ![image](https://user-images.githubusercontent.com/82169520/232566006-39f24589-b635-4797-b59a-c0912df646ba.png)
+![image](https://user-images.githubusercontent.com/82169520/232579338-66851d94-182c-494e-9bf8-c3e1fc6a7f89.png)
+
+![image](https://user-images.githubusercontent.com/82169520/232579504-2e6c9311-e941-400d-a856-7f2f233d6958.png)
+![image](https://user-images.githubusercontent.com/82169520/232579641-ae677f86-88f2-4c4f-b643-6b049d18292c.png)
+![image](https://user-images.githubusercontent.com/82169520/232579752-1a35a398-ade3-471a-9bf8-2647ae9a1036.png)
+![image](https://user-images.githubusercontent.com/82169520/232579989-66f50f03-ec1e-4be5-b363-71e0ff31bbf9.png)
+![image](https://user-images.githubusercontent.com/82169520/232580039-90b4d6f9-b8cb-4f32-be9b-0f88fe1f74d9.png)
+
+
+
 
 
 
