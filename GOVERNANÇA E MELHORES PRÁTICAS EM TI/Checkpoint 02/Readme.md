@@ -196,11 +196,28 @@ Organiza forma de trabalhar para evoluir forma de trabalho na empresa
 
 #### CMMi
 
+• Proporcionar o desenvolvimento da capacidade da organização para fazer projetos de software com qualidade – o CMMi funciona como guia de boas práticas.
+
+• Confirmar o alcance da maturidade na gestão da qualidade da produção de software – o CMMi possui método de auditoria de práticas de projeto de software.
+
+
 * Níveis de maturidade
-* 
+Quando avaliamos a maturidade do nosso desenvolvimento de software com CMMi, devemos empregar o modelo de Níveis de Maturidade(ABORDAGEM ESTAGIADA) definido no guia:
+
 ![image](https://user-images.githubusercontent.com/82169520/232522218-9784f065-96b5-41d6-a36c-6befa46b64b7.png)
 
 * Níveis de capacidade
-* 
+ Quando queremos desenvolver uma melhor condição de produção de software com CMMi, independentemente de certificação, devemos empregar o modelo de Níveis de Capacidade (ABORDAGEM CONTÍNUA)definido no guia:
+
 ![image](https://user-images.githubusercontent.com/82169520/232522301-d95adaf5-4aeb-414c-8a63-c6d7f078b7b9.png)
+
+
+#### MPS.BR
+
+Melhoria de processo do software brasileiro
+Desenvolvido pela SOFTEX (Associação para Promoção da Excelência doSoftware Brasileiro )
+Apoio do Ministério da Ciência e Tecnologia (MCT), Financiadora deEstudos e Projetos (FINEP), Serviço Brasileiro de Apoio às Micro ePequenas Empresas (SEBRAE), Banco Interamericano deDesenvolvimento (BID).
+
+![image](https://user-images.githubusercontent.com/82169520/232524603-9d64fa67-7582-4c32-9e55-24770a70c75a.png)
+
 
