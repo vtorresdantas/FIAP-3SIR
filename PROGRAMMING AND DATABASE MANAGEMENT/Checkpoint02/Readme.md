@@ -65,17 +65,29 @@ NOCYCLE;
 ![image](https://user-images.githubusercontent.com/82169520/232565771-99802763-2b77-494e-b55c-c80b1eb1843c.png)
 
 Regras de Uso de NEXTVAL e CURRVAL
+
 Você pode usar NEXTVAL e CURRVAL nos seguintes contextos:
+
 Lista SELECT de uma instrução SELECT que não faz parte de uma subconsulta
+
 Lista SELECT de uma subconsulta em uma instrução INSERT
+
 Cláusula VALUES de uma instrução INSERT
+
 Cláusula SET de uma instrução UPDATE
+
 Você não pode usar NEXTVAL e CURRVAL nos seguintes contextos:
+
 Lista SELECT de uma view
+
 Instrução SELECT com a palavra-chave DISTINCT
+
 Instrução SELECT com as cláusulas GROUP BY, HAVING ou ORDER BY
+
 Subconsulta em uma instrução SELECT, DELETE ou UPDATE
+
 Expressão DEFAULT em uma instrução CREATE TABLE ou ALTER TABLE
+
 Para obter mais informações, consulte "Pseudocolumns" e "CREATE SEQUENCE"
 no manual Oracle SQL Reference. 
 
