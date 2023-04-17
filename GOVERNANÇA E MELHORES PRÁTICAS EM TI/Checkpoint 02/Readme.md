@@ -10,8 +10,11 @@ Apps para o versinamento: Git, GitGUI, GitHub Desktop, Kraken (apenas apresentad
 Release - Copia o codigo da main criando uma brach e após as atualização, “relança” a main com as atualizações
 
 > Branch feature - realização de tarefas
+
 > Branch Bug Fix - Branch para correção de bug.
+
 > Hot Fix - Correção urgente direto na main.
+
 > Branch Support - Inspecionar o código e evitar de mexer direto na main.
 
 #### Códigos Git CMD 
