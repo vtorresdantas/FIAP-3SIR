@@ -104,6 +104,7 @@ no manual Oracle SQL Reference.
 ## Advanced SQL
 
 ![image](https://user-images.githubusercontent.com/82169520/232582635-a7c658b6-95da-43c2-8a3d-55e9e18f2cd8.png)
+
 INSERT INTO EMPLOYEES_RETIRED
 (employee_id, first_name, last_name, email,
 phone_number, hire_date, retired_date, job_id,
@@ -115,6 +116,7 @@ FROM employees
 WHERE employee_id=110
 
 ![image](https://user-images.githubusercontent.com/82169520/232582687-cf443461-7b76-4b5f-9109-fac36e5af1db.png)
+
 Transfira para o mesmo departamento do funcionário 130 todos os funcionários que
 tem o mesmo cargo do funcionário de código 114
 UPDATE employees
@@ -132,14 +134,67 @@ WHERE employee_id = 114);
 ![image](https://user-images.githubusercontent.com/82169520/232583113-c1d7d73f-a616-42dd-ba30-f9748d0f3d0e.png)
 
 ![image](https://user-images.githubusercontent.com/82169520/232583484-f61ca9aa-9592-4c6b-b2fe-a0c4fbcad6d8.png)
+
 Limitado pelo When e Then
 
 ![image](https://user-images.githubusercontent.com/82169520/232583666-4ccbf85f-c5ae-4950-8994-e14acc63f9e6.png)
 ![image](https://user-images.githubusercontent.com/82169520/232583697-45f04aaa-6567-4cbb-82b4-52d47197f2a6.png)
+
 Será avaliada cada cláusula WHEN da instrução. Se a primeira cláusula retornar verdade será executará a cláusula INTO correspondente e as cláusulas WHEN subsequentes serão ignoradas.
 
 ![image](https://user-images.githubusercontent.com/82169520/232584084-c9b81a25-858f-4c84-b1b3-5aecd4850bf1.png)
+
 A criação de pivô é uma operação onde será realizada uma transformação de forma que cada linha de uma tabela será convertia em várias outras linhas.
 
+![image](https://user-images.githubusercontent.com/82169520/232584595-c89187ee-c40f-4736-9e4f-a6bca78c8e68.png)
+
+• Essa instrução permite atualizar ou inserir dados em uma tabela de acordo com uma condição.
+• Caso a linha exista será executada uma atualização senão será executada uma inserção caso a linha seja nova.
+
+### Rollup e Cube
+
+![image](https://user-images.githubusercontent.com/82169520/232584736-eb068363-4d63-4c3b-9916-bb79370ef19d.png)
+
+#### Rollup
+
+* O agrupamento ROLLUP resulta em um conjunto com as linhas agrupadas e os valores de subtotais.
+
+* Além dos resultados regulares de agregação retornados pela cláusula GROUP BY, o operador ROLLUP produz subtotais de grupo
+
+![image](https://user-images.githubusercontent.com/82169520/232585060-ca0842c0-3d14-4484-8958-d28dfb02bcc4.png)
+
+#### Cube
+
+• O agrupamento CUBE resulta em um conjunto com a linhas de ROLLUP e as linhas de tabelas de referência cruzada. Além dos subtotais gerados pela oeprador ROLLUP, o operador CUBE gera subtotais para todas as combinações das dimensões especificada.
+
+![image](https://user-images.githubusercontent.com/82169520/232586568-e0fb4b62-8375-435b-8350-d676474f05f4.png)
+
+#### Função grouping
+
+• A função GROUPING é utilizada com os operadores CUBE ou ROLLUP para indicar qual o grupo que foram um subtotal de uma linha.
+
+• Essa função retorna 1 para indicar que a linha pertence a um determinado grupo e 0 para indicar que a linha não pertence do grupo.
+
+• Vejamos um exemplo a seguir de utilização da função GROUPING.
+
+![image](https://user-images.githubusercontent.com/82169520/232587009-b0c0e687-edea-42d9-8458-5f3a0b88b421.png)
+
+
+#### Consultas Hierárquicas
+
+• As consultas hierárquicas são utilizadas para recuperar dados baseandose em um relacionamento hierárquico.
+
+• Uma consulta hierárquica utiliza as cláusulas CONNECT BY e STARTWITH
+
+START WITH Determina as linhas-raiz da hierarquia (onde iniciar). Essa cláusulaé obrigatória para uma consulta hierárquica.
+
+CONNECT BY PRIOR Define as colunas que determinam o relacionamento entre linhas mães e filhas. Esta cláusula é obrigatória para uma consulta hierárquica.
+
+![image](https://user-images.githubusercontent.com/82169520/232588649-5e4663b5-46a5-4366-8fd4-fefd4b2c8ddb.png)
+
+#### Clausúla With
+
+![image](https://user-images.githubusercontent.com/82169520/232589306-00959516-6033-4ade-b977-8afeeb6ce233.png)
+![image](https://user-images.githubusercontent.com/82169520/232589336-f292e3ef-c6fa-489a-accf-c9e523c8fb42.png)
 
 
