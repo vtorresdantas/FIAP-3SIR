@@ -5,6 +5,6 @@
 Vantagens de Views:
 
 >Restringir o acesso a dados
-Facilitar consultas complexas
-Permitir a independência de dados
-Apresentar exibições diferentes dos mesmos dados
+>Facilitar consultas complexas
+>Permitir a independência de dados
+>Apresentar exibições diferentes dos mesmos dados
