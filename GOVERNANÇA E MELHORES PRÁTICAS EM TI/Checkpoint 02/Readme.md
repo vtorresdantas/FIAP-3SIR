@@ -155,3 +155,34 @@ Lista de configurações
 git config --list
 ```
 
+### NORMAS E GUIAS DA QUALIDADE
+
+![image](https://user-images.githubusercontent.com/82169520/232515140-cda223c1-ea77-4f31-83ba-89d1f395e3b9.png)
+
+A ISO produz normas para diversas áreas do conhecimento, inclusivealgumas voltadas a produção de software.
+Já o SEI e o SOFTEX são focados em qualidade de software.
+
+![image](https://user-images.githubusercontent.com/82169520/232515330-ee20af6a-b98e-4f72-996b-271def1f27a5.png)
+
+![image](https://user-images.githubusercontent.com/82169520/232515903-ed9fa1ba-2092-497f-8e5b-b406a9de1534.png)
+
+#### ISO 12207
+
+![image](https://user-images.githubusercontent.com/82169520/232517017-c7b16851-0881-484a-9a33-1b1a7d529137.png)
+Exemplo aula:
+Programar software - Principal
+Instalar redes - Suporte
+Instalar servidores - Suporte
+Modelar BD - Principal
+Planejar cronograma - Organizacional 
+Gerenciar custo - Organizacional 
+Testar software - Principal
+Controlar versão Sw - Principal
+Gestão da equipe - Organizacional 
+Distribuição tarefas - Organizacional 
+Controlar produtividade - Organizacional 
+Controlar qualidade - Organizacional
+Contratar fornecedor - Organizacional 
+Modelar aplicação - Principal
+
+
