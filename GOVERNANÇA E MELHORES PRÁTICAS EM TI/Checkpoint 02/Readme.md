@@ -169,6 +169,7 @@ Já o SEI e o SOFTEX são focados em qualidade de software.
 #### ISO 12207
 
 ![image](https://user-images.githubusercontent.com/82169520/232517017-c7b16851-0881-484a-9a33-1b1a7d529137.png)
+
 Exemplo aula:
 
 - Programar software - Principal
@@ -186,4 +187,18 @@ Exemplo aula:
 - Contratar fornecedor - Organizacional 
 - Modelar aplicação - Principal
 
+#### SPICE (ISO15504)
+
+Organiza forma de trabalhar para evoluir forma de trabalho na empresa
+
+![image](https://user-images.githubusercontent.com/82169520/232519028-005d8f6b-a0f6-41bd-864a-a564206a758b.png)
+
+
+#### CMMi
+
+* Níveis de maturidade
+![image](https://user-images.githubusercontent.com/82169520/232522218-9784f065-96b5-41d6-a36c-6befa46b64b7.png)
+
+* Níveis de capacidade
+![image](https://user-images.githubusercontent.com/82169520/232522301-d95adaf5-4aeb-414c-8a63-c6d7f078b7b9.png)
 
