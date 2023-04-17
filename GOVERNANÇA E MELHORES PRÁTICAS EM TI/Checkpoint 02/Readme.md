@@ -170,19 +170,20 @@ Já o SEI e o SOFTEX são focados em qualidade de software.
 
 ![image](https://user-images.githubusercontent.com/82169520/232517017-c7b16851-0881-484a-9a33-1b1a7d529137.png)
 Exemplo aula:
-Programar software - Principal
-Instalar redes - Suporte
-Instalar servidores - Suporte
-Modelar BD - Principal
-Planejar cronograma - Organizacional 
-Gerenciar custo - Organizacional 
-Testar software - Principal
-Controlar versão Sw - Principal
-Gestão da equipe - Organizacional 
-Distribuição tarefas - Organizacional 
-Controlar produtividade - Organizacional 
-Controlar qualidade - Organizacional
-Contratar fornecedor - Organizacional 
-Modelar aplicação - Principal
+
+- Programar software - Principal
+- Instalar redes - Suporte
+- Instalar servidores - Suporte
+- Modelar BD - Principal
+- Planejar cronograma - Organizacional 
+- Gerenciar custo - Organizacional 
+- Testar software - Principal
+- Controlar versão Sw - Principal
+- Gestão da equipe - Organizacional 
+- Distribuição tarefas - Organizacional 
+- Controlar produtividade - Organizacional 
+- Controlar qualidade - Organizacional
+- Contratar fornecedor - Organizacional 
+- Modelar aplicação - Principal
 
 
