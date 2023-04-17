@@ -26,80 +26,132 @@ Release - Copia o codigo da main criando uma brach e após as atualização, “
 
 
 Cria um repositório
+```
 git init
+```
 
 Clonar um repositório
+```
 git clone suaURL
+```
 
 Exibe as alterações
+```
 git status
+```
 
 Adiciona todas as alterações
+```
 git add .
+```
 
 Adiciona a alteração de um arquivo
+```
 git add "arquivo.txt"
+```
 
 Confirma a alteração
+```
 git commit -m "first commit"
+```
 
 Cria uma nova branch
+```
 git branch nomeBranch
+```
 
 Listar branch
+```
 git branch
+```
 
 Listar branches com informações dos últimos commits
+```
 git branch -v
+```
 
 Listar branches que já foram fundidos (merged) com o master
+```
 git branch --merged
+```
 
 Muda para uma branch
+```
 git checkout nomeBranch
+```
 
 Deleta uma branch
+```
 git branch -d nomeBranch
+```
 
 Atualiza a branch atual
+```
 git pull
+```
 
 Publica a alteração
+```
 git push
+```
 
 Reverte um commit
+```
 git revert commit
+```
 
 Exibe as diferenças entre versões
+```
 git diff
+```
 
 Como verificar histórico de atualizações
+```
 git reflog
+```
 
 Como navegar entre as versões do código
+```
 git reset --hard id
+```
 
 Exibe os repositórios remotos
+```
 git remote -v
+```
 
 Cria um stash
+```
 git stash
+```
 
 Adiciona e confirma alteração
+```
 git commit -am "mensagem"
+```
 
 Remove arquivo
+```
 git rm arquivo.txt
+```
 
 Exibe histórico
+```
 git log
+```
 
 Atualiza sem merge
+```
 git fetch
+```
 
 Cria etiqueta de versão
+```
 git tag v0.1
+```
 
 Lista de configurações
+```
 git config --list
+```
 
