@@ -197,8 +197,10 @@ Organiza forma de trabalhar para evoluir forma de trabalho na empresa
 #### CMMi
 
 * Níveis de maturidade
+* 
 ![image](https://user-images.githubusercontent.com/82169520/232522218-9784f065-96b5-41d6-a36c-6befa46b64b7.png)
 
 * Níveis de capacidade
+* 
 ![image](https://user-images.githubusercontent.com/82169520/232522301-d95adaf5-4aeb-414c-8a63-c6d7f078b7b9.png)
 
