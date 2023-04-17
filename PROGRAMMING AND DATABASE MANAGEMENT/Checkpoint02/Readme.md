@@ -17,11 +17,13 @@ Vantagens de Views:
 Criando uma View
 
 • Crie a view EMPVU80 com detalhes de funcionários do departamento 80:
+
 CREATE VIEW empvu80
 AS SELECT employee_id, last_name, salary
 FROM employees
 WHERE department_id = 80;
 
 • Descreva a estrutura da view usando o comando DESCRIBE:
+
 DESCRIBE empvu80
 
