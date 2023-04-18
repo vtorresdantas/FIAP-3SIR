@@ -1,0 +1,22 @@
+
+Ex 3
+INSERT FIRST
+    WHEN department_name = 'IT' OR job_id = 'AD_VP' THEN
+    INTO it_dept_employees VALUES(employee_id, first_name, last_name, email)
+    WHEN department_name = 'Sales' OR job_id = 'Executive' THEN
+    INTO sales_dept_employees  VALUES(employee_id, first_name, last_name, job_id)
+    ELSE
+    INTO other_dept_employees  VALUES(employee_id, last_name, email, salary, department_name)
+    SELECT e.employee_id, e.first_name, e.last_name, e.email, e.job_id, e.salary, d.department_name 
+    FROM employees e INNER JOIN departments d 
+    ON e.department_id = d.department_id;
+
+Ex 4
+SELECT LOJA.nome, PRODUTO.nome, sum(VENDA.valor_unitario * VENDA.quantidade)
+from fato_vendas VENDA
+inner join dim_Produtos PRODUTO
+ON PRODUTO.produto_id = VENDA.produto_id
+INNER JOIN dim_lojas LOJA
+ON LOJA.Loja_id = VENDA.loja_id
+GROUP BY rollup(LOJA.nome, PRODUTO.NOME)
+ORDER BY LOJA.nome asc;
