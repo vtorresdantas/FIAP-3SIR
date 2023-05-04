@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{headfragment :: head('categoria')}">
+	
+</head>
+
+<body>
+	<nav th:replace="~{menufragment :: menu}">
+</nav>
+
+	<div class="container">
+		<a type="button" class="btn btn-primary mt-2" href="categoria/create"> Criar</a>
+		<h2>Categorias</h2>
+		<hr>
+		<table>
+			<thead>
+				<th>Id</th>
+				<th>Nome</th>
+			</thead>
+			<tbody>
+				<tr th:each="item : ${categorias}">
+					<td th:text="${item.getId()}"></td>
+					<td th:text="${item.getDescricao()}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

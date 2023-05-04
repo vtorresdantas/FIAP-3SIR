@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{headfragment :: head('Arquivo')}">
+
+</head>
+
+<nav th:replace="~{menufragment :: menu}"></nav>
+
+<body>
+
+<h2 class="text-center"> Upload de arquivos</h2>
+
+
+
+	<div class="container">
+
+		<input type="file" name="file" id="file" /> <input type="button"
+			value="upload" onclick="up()">
+
+	</div>
+
+
+
+</body>
+
+<script>
+
+function up(){
+	
+	const arquivo = document.getElementById('file').files[0];
+	const formData = new FormData();
+	formData.append("image", arquivo);
+	
+	var requestOptions= {
+			method: 'POST',
+			body: formData
+	};
+	
+	fetch("/arquivo", requestOptions)
+	.then(response => response.json)
+	.then(result => console.log(result))
+	.catch(erro => console.log(erro));
+	
+	
+	
+}
+
+</script>
+
+</html>

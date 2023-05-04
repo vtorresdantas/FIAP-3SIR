@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{headfragment :: head('Criar categoria')}">
+	
+</head>
+
+<body>
+	<nav th:replace="~{menufragment :: menu}">
+</nav>
+
+	<div class="container mt-5">
+		<h2 class="text-center">Cadastrar categoria</h2>
+		<form method="post" action="/categoria/create">
+			<p>Descrição: <input type="text" name="descricao" id="descricao" /></p>
+			<input type="submit" value="Salvar" />
+		</form>
+	</div>
+</body>
+
+</html>

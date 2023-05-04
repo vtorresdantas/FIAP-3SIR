@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{headfragment :: head('Criar fornecedor')}">
+	
+</head>
+
+<body>
+	<nav th:replace="~{menufragment :: menu}">
+</nav>
+
+	<div class="container mt-5">
+		<h2 class="text-center">Cadastrar fornecedor</h2>
+		<form method="post" action="/fornecedor/create">
+			<p>nome: <input type="text" name="nome" id="nome" /></p>
+			<p>Endereço: <input type="text" name="endereco" id="endereco" /></p>
+			<p>Telefone: <input type="number" name="telefone" id="telefone" /></p>
+			<input type="submit" value="Salvar" />
+		</form>
+	</div>
+</body>
+
+</html>

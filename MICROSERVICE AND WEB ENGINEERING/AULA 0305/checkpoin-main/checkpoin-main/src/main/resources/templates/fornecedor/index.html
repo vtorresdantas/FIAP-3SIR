@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{headfragment :: head('fornecedor')}">
+	
+</head></head>
+
+<body>
+	<nav th:replace="~{menufragment :: menu}">
+</nav>
+
+	<div class="container">
+		<a type="button" class="btn btn-primary mt-2" href="fornecedor/create"> Criar</a>
+
+		<table>
+			<thead>
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Endereço</th>
+				<th>Telefone</th>
+			</thead>
+			<tbody>
+				<tr th:each="item : ${fornecedores}">
+					<td th:text="${item.getId()}"></td>
+					<td th:text="${item.getNome()}"></td>
+					<td th:text="${item.getEndereco()}"></td>
+					<td th:text="${item.getTelefone()}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+
+
+</body>
+
+</html>

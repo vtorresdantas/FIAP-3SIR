@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{headfragment :: head('produto')}">
+	
+</head>
+<body>
+	<nav th:replace="~{menufragment :: menu}">
+</nav>
+
+	<div class="container">
+		<a type="button" class="btn btn-primary mt-2" href="produto/create"> Criar</a>
+
+		<table>
+			<thead>
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Delete</th>
+			</thead>
+			<tbody>
+				<tr th:each="produto : ${produtos}">
+					<td th:text="${produto.getId()}"></td>
+					<td th:text="${produto.getNome()}"></td>
+					<td><a th:href="@{/produto/delete/{produtoId} (produtoId = ${produto.id}) }">Deletar</a></td>					
+					
+				</tr>
+			</tbody>
+		</table>
+		
+		
+	
+		<hr>
+		<h2>Categorias</h2>
+		<p>
+			<input type="button" class="btn btn-dark" value="Masculino" onclick="getCategoria(1)" />
+			<input type="button" class="btn btn-dark" value="Feminino" onclick="getCategoria(2)" />
+			<input type="button" class="btn btn-dark" value="Unissex" onclick="getCategoria(3)" />
+		</p>
+		
+		<hr>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>Descrição</th>
+				</tr>
+			</thead>
+			<tbody id="produto">
+
+			</tbody>
+		</table>
+
+	</div>
+</body>
+
+<script>
+	function getCategoria(id) {
+		fetch(`/produto/categoria/${id}`)
+			.then(response => response.json())
+			.then(data => showTableCategoria(data))
+			.catch(error => console.log(error))
+	}
+
+	function showTableCategoria(data){
+		let tBody = document.getElementById('produto');
+		tBody.innerHTML = '';
+		
+		for(i = 0; i < data.length; i++){
+			let row = '<tr>';
+			row += `<td>${data[i].id}</td>`;
+			row += `<td>${data[i].nome}</td>`;
+			row += '</tr>';
+			tBody.innerHTML += row;
+		}
+	}
+
+
+
+</script>
+
+</html>
