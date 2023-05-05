@@ -1,6 +1,7 @@
 # Resumo Check 02
 
 Formatação do projeto geral.
+
 ![image](https://user-images.githubusercontent.com/82169520/236505979-a31ff78e-7781-4b02-8f1e-4bb4fae0d08e.png)
 
 - Todas as Activies são .kt e ficam na primeira aba.
