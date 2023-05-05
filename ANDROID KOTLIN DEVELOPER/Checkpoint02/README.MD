@@ -35,6 +35,27 @@ Alteração de Themes pode ser utilizada para redefinir algumas cores padrões. 
 ![image](https://user-images.githubusercontent.com/82169520/236360711-603cf4bf-cda3-4f64-a528-680c44653fd0.png)
 ![image](https://user-images.githubusercontent.com/82169520/236360768-0fac96e8-4a46-4247-a39a-be7f1e9b550d.png)
 
+## Intents
+
+As Intent Activities em Kotlin são usadas para navegar entre diferentes telas (ou atividades) em um aplicativo Android. Quando um usuário interage com um elemento de interface do usuário, como um botão, é possível programar o aplicativo para responder a esse evento criando uma Intent que representa a próxima tela que deve ser exibida.
+
+As Intent Activities permitem que você inicie uma nova atividade ou interaja com outra atividade existente no mesmo aplicativo ou em um aplicativo diferente. Você pode usar uma Intent Activity para realizar uma variedade de tarefas, incluindo:
+
+Navegação de tela: você pode usar uma Intent Activity para mover o usuário para outra tela do aplicativo quando ele clica em um botão ou ícone.
+Compartilhamento de conteúdo: você pode usar uma Intent Activity para permitir que o usuário compartilhe informações com outros aplicativos, como mensagens de texto ou e-mails.
+Acesso à funcionalidade do sistema: você pode usar uma Intent Activity para acessar recursos do sistema, como a câmera ou o microfone, para capturar imagens ou gravações de áudio.
+
+### Adicionando icone
+
+![image](https://user-images.githubusercontent.com/82169520/236363049-df3dad36-c6d2-4e7b-96e8-cd3e64a33587.png)
+![image](https://user-images.githubusercontent.com/82169520/236363060-652047be-4887-44c0-84fa-2b114561279d.png)
+
+### Criando nova activity
+
+![image](https://user-images.githubusercontent.com/82169520/236363742-34f6907b-37e7-4a2f-b90d-6b2408763a01.png)
+
+### Binding
+![image](https://user-images.githubusercontent.com/82169520/236363822-1b9809b9-e6e2-4472-ad77-98fdfedf248f.png)
 
 
 
