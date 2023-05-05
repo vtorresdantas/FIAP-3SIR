@@ -1,5 +1,17 @@
 # Resumo Check 02
 
+Formatação do projeto geral.
+![image](https://user-images.githubusercontent.com/82169520/236505979-a31ff78e-7781-4b02-8f1e-4bb4fae0d08e.png)
+
+- Todas as Activies são .kt e ficam na primeira aba.
+- O drawable é direcionada para os icones
+- O layout segue a criação dos .kt. Cada Activies.kt criada gera um layout novo.
+- Themes é usado para o temas e para alteração deles.
+- O build.gradle utilizamos apenas para inserir essa linha (por enquanto): 
+  buildFeatures {
+        viewBinding true
+    }
+
 ## Strings
 
 A ideia de Strings é tirar a parte escrita do activity main, pois além do android studio recomendar, torna mais fácil e o codigo clean.
