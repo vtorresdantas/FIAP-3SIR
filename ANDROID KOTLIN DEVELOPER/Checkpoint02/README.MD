@@ -63,6 +63,7 @@ Por exemplo, se você tiver um botão em sua interface de usuário e quiser que 
 O processo de binding em Kotlin é geralmente feito usando bibliotecas de ligação de dados, como o Data Binding Library da Google ou o Android Kotlin Extensions. Essas bibliotecas simplificam o processo de vinculação de elementos de UI com código Kotlin, reduzindo a quantidade de código que você precisa escrever e tornando a tarefa mais fácil e intuitiva.
 
 ![image](https://user-images.githubusercontent.com/82169520/236363822-1b9809b9-e6e2-4472-ad77-98fdfedf248f.png)
+![image](https://user-images.githubusercontent.com/82169520/236468772-e02649c0-e0c7-4fa8-985f-6016e1bb34c7.png)
 
 
 
