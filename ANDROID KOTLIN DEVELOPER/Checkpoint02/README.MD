@@ -55,6 +55,13 @@ Acesso à funcionalidade do sistema: você pode usar uma Intent Activity para ac
 ![image](https://user-images.githubusercontent.com/82169520/236363742-34f6907b-37e7-4a2f-b90d-6b2408763a01.png)
 
 ### Binding
+
+Em Kotlin, o termo "binding" é comumente usado para se referir à conexão de elementos de interface do usuário (UI) com código Kotlin. A ideia é estabelecer uma associação entre um elemento de UI, como um botão ou um campo de texto, e uma variável ou função em Kotlin.
+
+Por exemplo, se você tiver um botão em sua interface de usuário e quiser que ele execute uma função específica quando for clicado, você precisará criar uma função em Kotlin e, em seguida, vinculá-la ao botão. Isso é feito usando o binding, que permite que você se refira ao botão em seu código Kotlin e defina a ação a ser executada quando ele for clicado.
+
+O processo de binding em Kotlin é geralmente feito usando bibliotecas de ligação de dados, como o Data Binding Library da Google ou o Android Kotlin Extensions. Essas bibliotecas simplificam o processo de vinculação de elementos de UI com código Kotlin, reduzindo a quantidade de código que você precisa escrever e tornando a tarefa mais fácil e intuitiva.
+
 ![image](https://user-images.githubusercontent.com/82169520/236363822-1b9809b9-e6e2-4472-ad77-98fdfedf248f.png)
 
 
