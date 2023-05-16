@@ -149,3 +149,20 @@ Feedback
 - Router(config-subif)#encapsulation dot1q 2
 - Router(config-subif)#ip address 200.200.200.1 255.255.255.0
 - Router(config-subif)#
+
+## Vlans
+
+Criar VLAN
+- Switch(vlan)#vlan 2
+- Switch(vlan)#name marketing
+- Switch(vlan)#exit
+
+Definir a VLAN de uma porta em modo acesso
+- Switch(config)#interface fastethernet f0/9
+- Switch(config-if)#switchport mode access
+- Switch(config-if)#switchport access vlan 2
+
+Definir a VLAN de uma porta em modo tronco (trunk)
+- Switch(config-if)#interface ethernet f0/7
+- Switch(config-if)#switchport mode trunk
+- Switch(config-if)#switchport trunk allowed vlan all
