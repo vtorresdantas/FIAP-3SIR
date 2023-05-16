@@ -122,3 +122,30 @@ Feedback
 - router(config-if)#interface gig0/1
 - router(config-if)#ip access-group 104 out
 
+## Config Vlan
+
+- Switch>enable
+- Switch#configure terminal
+- Switch(config)#
+- Switch(config)#vlan 2
+- Switch(config-vlan)#name AMARELA
+- Switch(config-vlan)#
+- Switch(config-vlan)#
+- Switch(config-vlan)#interface range fa0/1-fa0/10
+- Switch(config-if-range)#switchport access vlan 2
+- Switch(config-if-range)#
+- Switch(config-if-range)#
+- Switch(config-if-range)#interface gig0/1
+- Switch(config-if)#switchport mode trunk
+- Switch(config-if)#switchport trunk allowed vlan all
+- Switch(config-if)#
+
+- Router>
+- Router>enable
+- Router#configure terminal
+- Router(config)#
+- Router(config)#interface gig0/0.2
+- Router(config-subif)#
+- Router(config-subif)#encapsulation dot1q 2
+- Router(config-subif)#ip address 200.200.200.1 255.255.255.0
+- Router(config-subif)#
