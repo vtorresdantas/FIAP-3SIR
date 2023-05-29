@@ -62,7 +62,7 @@ DROP TABLE PRODUCAO_7501_10000;
 DROP TABLE PRODUCAO_10001_20000;
 
 CREATE TABLE PRODUCAO_0_7500
-AS SELECT * PF0645.FROM PRODUCAO
+AS SELECT * FROM PF0645.PRODUCAO
 WHERE 1=2;
 
 CREATE TABLE PRODUCAO_7501_10000
@@ -73,5 +73,50 @@ CREATE TABLE PRODUCAO_10001_20000
 AS SELECT * FROM PF0645.PRODUCAO
 WHERE 1=2;
 
+INSERT FIRST 
+    WHEN QUANTIDADE <= 7500 THEN
+        INTO PRODUCAO_0_7500 values(id_producao, id_pais, id_cultura, ano, quantidade)
+    WHEN QUANTIDADE <= 10000 THEN
+        INTO PRODUCAO_7501_10000 values(id_producao, id_pais, id_cultura, ano, quantidade)
+    WHEN QUANTIDADE > 10000 THEN
+        INTO PRODUCAO_10001_20000 values(id_producao, id_pais, id_cultura, ano, quantidade)
+    SELECT id_producao, id_pais, id_cultura, ano, quantidade
+FROM PF0645.PRODUCAO;
+
+SELECT * FROM PRODUCAO_0_7500;
+
+SELECT * FROM PRODUCAO_7501_10000;
+
+SELECT * FROM PRODUCAO_10001_20000;
+
 -- Questão 4
+
+drop table consumo_paises;
+
+CREATE TABLE consumo_paises as
+SELECT PAIS, SUM(CONSUMO) as "CONSUMO"
+FROM AUX
+GROUP BY PAIS;
+
+UPDATE consumo_paises
+SET consumo = 0
+WHERE consumo is null;
+
+DELETE FROM consumo_paises
+WHERE pais is null;
+
+WITH CTE_Paises AS (
+  SELECT PAIS, CONSUMO, AVG(CONSUMO) OVER () AS MediaConsumo
+  FROM consumo_paises
+)
+SELECT PAIS, CONSUMO
+FROM CTE_Paises
+WHERE CONSUMO > MediaConsumo;
+
+
+
+
+
+
+
 
