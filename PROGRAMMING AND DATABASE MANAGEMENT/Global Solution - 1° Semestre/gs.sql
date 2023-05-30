@@ -20,29 +20,30 @@ SELECT * FROM PF0645.PAISES;
 
 -- Questão 1
 
-drop view aux;
-
-CREATE VIEW aux as
+CREATE OR REPLACE VIEW aux as
 SELECT paises.nome as PAIS, culturas.nome as CULTURA, 
 producao.quantidade as PRODUCAO,
 consumo.quantidade as CONSUMO, 
 desperdicio.quantidade as DESPERDICIO
-    FROM CONSUMO
-    FULL OUTER JOIN CULTURAS
-        on consumo.id_cultura = culturas.id_cultura
-     FULL OUTER JOIN PAISES
-        on consumo.id_pais = paises.id_pais
-    FULL OUTER JOIN PRODUCAO
-         on paises.id_pais = producao.id_pais
-    FULL OUTER JOIN DESPERDICIO
-        on paises.id_pais = desperdicio.id_pais
-order by paises.nome;
-
+    FROM PAISES
+    JOIN PRODUCAO 
+        on paises.id_pais = producao.id_pais
+    JOIN CULTURAS 
+        on producao.id_cultura = culturas.id_cultura
+    LEFT JOIN CONSUMO    
+        on paises.id_pais = consumo.id_pais
+    LEFT JOIN DESPERDICIO
+        on paises.id_pais = desperdicio.id_pais and
+        producao.id_cultura = desperdicio.id_cultura
+ORDER BY paises.nome, culturas.nome;
+    
 SELECT PAIS, CULTURA, sum(PRODUCAO) as "PRODUCAO TOTAL", 
 sum(CONSUMO) as "CONSUMO TOTAL", sum(DESPERDICIO) as "DESPERDICIO TOTAL"
 FROM aux
-GROUP BY pais, cultura
-order by pais;
+GROUP BY rollup(pais, cultura)
+order by pais, cultura;
+
+select * from aux;
   
 -- Questão 2
 
@@ -52,6 +53,8 @@ FROM AUX
 where pais = 'Brasil'
 group by pais, cultura
 order by cultura;
+
+SELECT * FROM CONSUMO_BRASIL;
 
 -- Questão 3
 
