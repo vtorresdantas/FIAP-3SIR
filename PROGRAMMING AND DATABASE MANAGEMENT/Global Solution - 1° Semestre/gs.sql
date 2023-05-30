@@ -3,56 +3,55 @@
 
 -- Criação das tabelas
 
-CREATE TABLE CONSUMO AS
+SELECT * FROM PF0645.PAISES;
+
 SELECT * FROM PF0645.CONSUMO;
 
-CREATE TABLE DESPERDICIO AS
 SELECT * FROM PF0645.DESPERDICIO;
 
-CREATE TABLE CULTURAS AS
-SELECT * FROM PF0645.CULTURAS;
-
-CREATE TABLE PRODUCAO AS
 SELECT * FROM PF0645.PRODUCAO;
 
-CREATE TABLE PAISES AS
-SELECT * FROM PF0645.PAISES;
+SELECT * FROM PF0645.CULTURAS;
 
 -- Questão 1
 
-CREATE OR REPLACE VIEW aux as
-SELECT paises.nome as PAIS, culturas.nome as CULTURA, 
-producao.quantidade as PRODUCAO,
-consumo.quantidade as CONSUMO, 
-desperdicio.quantidade as DESPERDICIO
-    FROM PAISES
-    JOIN PRODUCAO 
-        on paises.id_pais = producao.id_pais
-    JOIN CULTURAS 
-        on producao.id_cultura = culturas.id_cultura
-    LEFT JOIN CONSUMO    
-        on paises.id_pais = consumo.id_pais
-    LEFT JOIN DESPERDICIO
-        on paises.id_pais = desperdicio.id_pais and
-        producao.id_cultura = desperdicio.id_cultura
-ORDER BY paises.nome, culturas.nome;
-    
-SELECT PAIS, CULTURA, sum(PRODUCAO) as "PRODUCAO TOTAL", 
-sum(CONSUMO) as "CONSUMO TOTAL", sum(DESPERDICIO) as "DESPERDICIO TOTAL"
-FROM aux
-GROUP BY rollup(pais, cultura)
-order by pais, cultura;
+SELECT paises.nome AS PAIS, cultura.nome as CULTURA, SUM(producao.quantidade) AS PRODUCAO_TOTAL, 
+SUM(consumo.quantidade) AS CONSUMO_TOTAL, SUM(desperdicio.quantidade) AS DESPERDICIO_TOTAL
 
-select * from aux;
-  
+    FROM PF0645.CONSUMO consumo
+    JOIN PF0645.PAISES paises
+    ON consumo.id_pais = paises.id_pais
+    
+    JOIN PF0645.culturas cultura 
+    ON consumo.id_cultura = cultura.id_cultura
+    
+    LEFT JOIN PF0645.PRODUCAO producao
+    ON producao.id_pais = paises.id_pais
+    and producao.id_cultura = cultura.id_cultura
+    
+    LEFT JOIN PF0645.desperdicio desperdicio
+    ON desperdicio.id_pais = paises.id_pais
+    and desperdicio.id_cultura = cultura.id_cultura
+      
+GROUP BY rollup(paises.nome, cultura.nome)
+ORDER BY paises.nome, cultura.nome;
+
+
 -- Questão 2
 
-CREATE VIEW CONSUMO_BRASIL AS
-SELECT cultura, sum(consumo) as "CONSUMO TOTAL"
-FROM AUX
-where pais = 'Brasil'
-group by pais, cultura
-order by cultura;
+CREATE OR REPLACE VIEW CONSUMO_BRASIL AS
+SELECT cultura.nome as CULTURA,
+SUM(consumo.quantidade) AS CONSUMO_TOTAL
+
+    FROM PF0645.PAISES paises
+    JOIN PF0645.CONSUMO consumo 
+    ON consumo.id_pais = paises.id_pais
+    
+    JOIN PF0645.culturas cultura 
+    ON consumo.id_cultura = cultura.id_cultura
+    
+where paises.nome = 'Brasil'
+GROUP BY paises.nome, cultura.nome;
 
 SELECT * FROM CONSUMO_BRASIL;
 
@@ -94,27 +93,23 @@ SELECT * FROM PRODUCAO_10001_20000;
 
 -- Questão 4
 
-drop table consumo_paises;
+CREATE OR REPLACE VIEW CONSUMO_PAISES AS
+SELECT paises.nome AS PAIS, SUM(consumo.quantidade) AS CONSUMO_TOTAL
 
-CREATE TABLE consumo_paises as
-SELECT PAIS, SUM(CONSUMO) as "CONSUMO"
-FROM AUX
-GROUP BY PAIS;
+    FROM PF0645.CONSUMO consumo
+    JOIN PF0645.PAISES paises
+    ON consumo.id_pais = paises.id_pais
+         
+GROUP BY paises.nome
+ORDER BY paises.nome;
 
-UPDATE consumo_paises
-SET consumo = 0
-WHERE consumo is null;
-
-DELETE FROM consumo_paises
-WHERE pais is null;
-
-WITH CTE_Paises AS (
-  SELECT PAIS, CONSUMO, AVG(CONSUMO) OVER () AS MediaConsumo
+WITH CTE_Media_Paises AS (
+  SELECT PAIS, CONSUMO_TOTAL, AVG(CONSUMO_TOTAL) OVER () AS MediaConsumo
   FROM consumo_paises
 )
-SELECT PAIS, CONSUMO
-FROM CTE_Paises
-WHERE CONSUMO > MediaConsumo;
+SELECT PAIS, CONSUMO_TOTAL
+FROM CTE_Media_Paises
+WHERE CONSUMO_TOTAL > MediaConsumo;
 
 
 
