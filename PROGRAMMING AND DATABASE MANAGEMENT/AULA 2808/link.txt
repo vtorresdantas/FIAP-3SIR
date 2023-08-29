@@ -1,0 +1,1 @@
+https://docs.oracle.com/en/database/oracle/oracle-database/19/lnpls/plsql-error-handling.html#GUID-0502DC1A-F0A5-4180-A912-6A5CDC855F56
