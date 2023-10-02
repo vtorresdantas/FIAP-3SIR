@@ -6,8 +6,7 @@ RM 89134 - Leandro Teruya
 
 SET SERVEROUTPUT ON;
 
-DECLARE
-    v_titulo_eleitoral VARCHAR2(12);
+CREATE OR REPLACE FUNCTION valida_titulo_eleitoral (p_titulo_eleitoral VARCHAR2) RETURN VARCHAR2 IS
     v_seq NUMBER;
     v_uf NUMBER;
     v_dv_1 NUMBER;
@@ -17,14 +16,11 @@ DECLARE
     v_resto_1 NUMBER;
     v_resto_2 NUMBER;
 BEGIN
-    -- Solicitação de input ao usuário
-    v_titulo_eleitoral := &input_titulo;
-
     -- Extração dos componentes do título
-    v_seq := TO_NUMBER(SUBSTR(v_titulo_eleitoral, 1, 6));
-    v_uf := TO_NUMBER(SUBSTR(v_titulo_eleitoral, 7, 2));
-    v_dv_1 := TO_NUMBER(SUBSTR(v_titulo_eleitoral, 9, 1));
-    v_dv_2 := TO_NUMBER(SUBSTR(v_titulo_eleitoral, 10, 1));
+    v_seq := TO_NUMBER(SUBSTR(p_titulo_eleitoral, 1, 6));
+    v_uf := TO_NUMBER(SUBSTR(p_titulo_eleitoral, 7, 2));
+    v_dv_1 := TO_NUMBER(SUBSTR(p_titulo_eleitoral, 9, 1));
+    v_dv_2 := TO_NUMBER(SUBSTR(p_titulo_eleitoral, 10, 1));
 
     -- Cálculo do DV-1
     v_calc_dv_1 := 0;
@@ -44,11 +40,32 @@ BEGIN
 
     -- Verificação dos dígitos verificadores
     IF (v_resto_1 = v_dv_1) AND (v_calc_dv_2 = v_dv_2) THEN
-        DBMS_OUTPUT.PUT_LINE('O título de eleitor é válido.');
+        RETURN 'O título de eleitor é válido.';
     ELSE
-        DBMS_OUTPUT.PUT_LINE('O título de eleitor é inválido.');
+        RETURN 'O título de eleitor é inválido.';
     END IF;
 END;
+/
+
+-- Ativar a saída no console
+DBMS_OUTPUT.ENABLE;
+
+-- Programa principal
+DECLARE
+    v_titulo_input VARCHAR2(12);
+    v_validacao VARCHAR2(100);
+BEGIN
+    -- Solicita um título eleitoral como entrada
+    v_titulo_input := '&titulo_input'; -- O usuário será solicitado a inserir o título eleitoral
+
+    -- Chama a função para validar o título eleitoral
+    v_validacao := valida_titulo_eleitoral(v_titulo_input);
+
+    -- Exibe o resultado
+    DBMS_OUTPUT.PUT_LINE('O título inserido é ' || v_validacao);
+END;
+/
+
 
 GRANT EXECUTE ON valida_cartao_credito TO PF0645;
 
