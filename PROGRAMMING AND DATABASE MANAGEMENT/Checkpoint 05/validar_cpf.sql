@@ -3,8 +3,6 @@ SET SERVEROUTPUT ON;
 /*
 RM 88415 – Vitor Torres Dantas
 RM 88430 – Matheus de Oliveira
-RM 89134 – Leandro Teruya
-RM 87768 - Kaique Teixeira
 */
 -- Criação da função para validar CPF
 CREATE OR REPLACE FUNCTION validar_cpf(p_cpf VARCHAR2) RETURN VARCHAR2 IS

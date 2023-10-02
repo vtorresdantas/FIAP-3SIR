@@ -1,3 +1,8 @@
+/*
+RM 88415 – Vitor Torres Dantas
+RM 88430 – Matheus de Oliveira
+*/
+
 SET SERVEROUTPUT ON;
 
 CREATE OR REPLACE FUNCTION valida_cartao_credito (p_numero_cartao VARCHAR2) 
@@ -55,6 +60,9 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('O número do cartão inserido é ' || v_validacao);
 END;
 /
+
+GRANT EXECUTE ON valida_cartao_credito TO PF0645;
+
 
 
 

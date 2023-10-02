@@ -1,8 +1,6 @@
 /*
 RM 88415 – Vitor Torres Dantas
 RM 88430 – Matheus de Oliveira
-RM 89134 – Leandro Teruya
-RM 87768 - Kaique Teixeira
 */
 
 SET SERVEROUTPUT ON;
@@ -50,4 +48,6 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('O título de eleitor é inválido.');
     END IF;
 END;
+
+GRANT EXECUTE ON valida_cartao_credito TO PF0645;
 
