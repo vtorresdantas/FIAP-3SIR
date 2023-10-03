@@ -13,6 +13,11 @@ IS
     v_numero_digitos NUMBER := LENGTH(p_numero_cartao);
     v_digito NUMBER := 0;
 BEGIN
+    -- Verifica se o número de dígitos é igual a 16
+    IF v_numero_digitos <> 16 THEN
+        raise_application_error(-20001, 'Número de dígitos do cartão insuficiente');
+    END IF;
+
     FOR i IN REVERSE 1..v_numero_digitos LOOP
         -- Pega o dígito atual
         v_digito := TO_NUMBER(SUBSTR(p_numero_cartao, i, 1));
