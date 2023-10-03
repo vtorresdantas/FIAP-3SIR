@@ -67,5 +67,5 @@ END;
 /
 
 
-GRANT EXECUTE ON valida_cartao_credito TO PF0645;
+GRANT EXECUTE ON valida_titulo_eleitoral TO PF0645;
 

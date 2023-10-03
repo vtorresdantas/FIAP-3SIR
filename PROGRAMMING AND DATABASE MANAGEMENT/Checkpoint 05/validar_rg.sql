@@ -36,6 +36,9 @@ BEGIN
 END validar_rg;
 /
 
+-- Ativar a saída no console
+DBMS_OUTPUT.ENABLE;
+
 
 -- Programa principal
 DECLARE

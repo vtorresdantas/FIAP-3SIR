@@ -45,6 +45,9 @@ BEGIN
 END validar_cpf;
 /
 
+-- Ativar a saída no console
+DBMS_OUTPUT.ENABLE;
+
 -- Programa principal
 DECLARE
     v_cpf_input VARCHAR2(11);

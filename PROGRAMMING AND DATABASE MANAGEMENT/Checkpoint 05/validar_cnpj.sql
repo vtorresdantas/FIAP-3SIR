@@ -62,6 +62,9 @@ BEGIN
 END validar_cnpj;
 /
 
+-- Ativar a saída no console
+DBMS_OUTPUT.ENABLE;
+
 -- Programa principal
 DECLARE
     v_cnpj_input VARCHAR2(14);
